@@ -7,11 +7,11 @@
         alt="Sunset in the mountains"
       >
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2 text-center">
+        <div :class="`font-bold text-xl mb-2 text-center text-${Theme.colors.fontDarker}`">
           {{ product.title }}
         </div>
 
-        <p class="text-gray-700 text-base text-center">
+        <p :class="`text-${Theme.colors.fontPrimary} text-base text-center`">
           {{ product.description }}
         </p>
       </div>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { Card } from 'UI-Components';
+import { Card, Theme } from 'UI-Components';
 
 export default {
   components: {
@@ -31,6 +31,11 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  data() {
+    return {
+      Theme,
+    };
   },
   computed: {
     serviceImage() {

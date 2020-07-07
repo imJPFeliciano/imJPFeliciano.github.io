@@ -7,12 +7,12 @@
     <div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
       <div>
         <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">
-          I'm <span class="text-indigo-600">{{ PageInformation.title }}</span>
+          I'm <span :class="`text-${Theme.colors.fontAccent}`">{{ PageInformation.title }}</span>
         </h2>
         <p
           v-for="(paragraph, index) in PageInformation.description"
           :key="index"
-          class="mt-2 text-sm text-gray-500 md:text-base"
+          :class="`mt-2 text-lg text-${Theme.colors.fontPrimary}`"
         >
           {{ paragraph }}
         </p>
@@ -33,12 +33,14 @@
 </template>
 
 <script>
+import { Theme } from 'UI-Components';
 import PageInformation from './hero-info';
 
 export default {
   data() {
     return {
       PageInformation,
+      Theme,
     };
   },
   computed: {

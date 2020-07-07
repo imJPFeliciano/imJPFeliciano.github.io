@@ -3,6 +3,7 @@ import Footer from './footer';
 import Timeline from './timeline';
 import Container from './container';
 import SectionTitle from './fonts/SectionTitle';
+import Theme from './theme';
 
 export {
   Container,
@@ -10,4 +11,5 @@ export {
   SectionTitle,
   Timeline,
   Footer,
+  Theme,
 };

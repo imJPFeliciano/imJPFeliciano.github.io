@@ -1,10 +1,14 @@
 <template>
   <div class="w-full">
     <navigation />
-
+    <!-- TODO: Add Paralax Hero section -->
     <about />
-    <experience />
     <services-list />
+    <experience />
+    <!-- TODO: Add portfolio -->
+    <!-- TODO: Add stats -->
+    <!-- TODO: Add testimonials -->
+    <!-- TODO: Add blog posts -->
     <contact-form />
 
     <footer-nav />

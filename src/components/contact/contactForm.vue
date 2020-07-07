@@ -15,7 +15,7 @@
           method="POST"
           @submit="validateForm"
         >
-          <p class="text-gray-600">
+          <p :class="`text-${Theme.colors.fontPrimary}`">
             To help you choose your properly
           </p>
           <div class="flex space-x-5 mt-3">
@@ -53,7 +53,7 @@
             placeholder="Tell me about desired property"
             class="border p-2 mt-3 w-full"
           />
-          <p class="font-bold text-sm mt-3">
+          <p class="font-bold text-base mt-3">
             GDPR Agreement *
           </p>
           <div class="flex items-baseline space-x-2 mt-2">
@@ -64,14 +64,15 @@
               name="gdpr-agreement"
               class="inline-block"
             >
-            <p class="text-gray-600 text-sm">
+            <p :class="`text-${Theme.colors.fontPrimary} text-base`">
               I consent to having this website store my submitted information so they can respond to my inquiry.
             </p>
           </div>
           <input
             type="submit"
             value="Submit"
-            class="w-full mt-6 bg-indigo-400 hover:bg-indigo-500 text-white font-semibold p-3"
+            :class="`w-full mt-6 bg-${Theme.colors.primary}
+              hover:bg-${Theme.colors.primaryDark} text-white font-semibold p-3`"
           >
         </form>
       </card>
@@ -80,7 +81,12 @@
 </template>
 
 <script>
-import { Container, Card, SectionTitle } from 'UI-Components';
+import {
+  Container,
+  Card,
+  SectionTitle,
+  Theme,
+} from 'UI-Components';
 
 export default {
   components: {
@@ -97,6 +103,7 @@ export default {
       contactMessage: '',
       contactGDPRAgreement: false,
       formErrors: [],
+      Theme,
     };
   },
   methods: {

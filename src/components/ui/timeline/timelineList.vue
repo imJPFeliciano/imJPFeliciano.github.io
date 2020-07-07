@@ -5,9 +5,9 @@
       :key="key"
       class=""
     >
-      <span class="ml-8 text-xl font-semibold text-gray-900">{{ key }}</span>
+      <span :class="`ml-8 text-xl font-semibold text-${Theme.colors.fontDarker}`">{{ key }}</span>
       <div
-        class="border-r-2 border-indigo-200 absolute h-full top-0"
+        :class="`border-r-2 border-${Theme.colors.primaryLighter} absolute h-full top-0`"
         style="left: 15px"
       />
 
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { Theme } from 'UI-Components';
 import TimelineListItem from './timelineListItem';
 
 export default {
@@ -35,6 +36,11 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  data() {
+    return {
+      Theme,
+    };
   },
 };
 </script>

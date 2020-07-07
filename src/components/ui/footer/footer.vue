@@ -1,7 +1,7 @@
 <template>
   <div class="bg-indigo-500 pt-2 mt-16">
     <div
-      class="flex pb-5 px-3 m-auto pt-5 text-indigo-200 text-sm flex-col
+      class="flex pb-5 px-3 m-auto pt-5 text-indigo-200 text-base flex-col
       md:flex-row max-w-6xl"
     >
       <div class="mt-2">
@@ -170,7 +170,7 @@ export default {
     return {
       twitter: 'JonathanPerazaF',
       facebook: 'jperazafeliciano',
-      youtube: 'https://www.youtube.com/channel/UC9tV6FFeNPX6M--hJV_fJvQ?view_as=subscriber',
+      youtube: 'https://www.youtube.com/channel/UClzqhP91W1tmNyOZcVVSLdA',
       linkedIn: 'jpfeliciano',
     };
   },
