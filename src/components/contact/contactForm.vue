@@ -4,9 +4,10 @@
       id="contact"
       class="container mt-8 mx-auto"
     >
-      <h1 class="text-4xl text-bold font-semibold text-center">
-        Let me call you!
-      </h1>
+      <section-title
+        title="contact me"
+        description="get in touch"
+      />
       <card class="mx-auto">
         <form
           class="form bg-white p-4 my-5 relative mx-auto"
@@ -79,12 +80,13 @@
 </template>
 
 <script>
-import { Container, Card } from 'UI-Components';
+import { Container, Card, SectionTitle } from 'UI-Components';
 
 export default {
   components: {
     Card,
     Container,
+    SectionTitle,
   },
   data() {
     return {

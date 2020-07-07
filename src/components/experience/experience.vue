@@ -4,9 +4,10 @@
       id="experience"
       class="container mt-8 mx-auto"
     >
-      <h1 class="text-4xl text-bold font-semibold text-center">
-        Work Experience
-      </h1>
+      <section-title
+        title="My resume"
+        description="Professional Experience"
+      />
       <card class="mx-auto">
         <div class="form bg-white p-4 my-5 relative mx-auto">
           <timeline :items="timelineItems" />
@@ -17,7 +18,12 @@
 </template>
 
 <script>
-import { Container, Card, Timeline } from 'UI-Components';
+import {
+  Container,
+  Card,
+  Timeline,
+  SectionTitle,
+} from 'UI-Components';
 import workExperienceItems from './work-experience';
 
 export default {
@@ -25,6 +31,7 @@ export default {
     Container,
     Card,
     Timeline,
+    SectionTitle,
   },
   data() {
     return {

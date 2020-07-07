@@ -3,9 +3,10 @@
     <div
       id="services"
     >
-      <h3 class="text-4xl text-bold font-semibold text-center">
-        Services
-      </h3>
+      <section-title
+        title="My services"
+        description="What Can I Do"
+      />
       <div class="block sm:flex sm:flex-wrap">
         <service-item
           v-for="(service, index) in ServicesItems"
@@ -18,13 +19,14 @@
 </template>
 
 <script>
-import { Container } from 'UI-Components';
+import { Container, SectionTitle } from 'UI-Components';
 import ServicesItems from './services-items';
 import ServiceItem from './service-item';
 
 export default {
   components: {
     Container,
+    SectionTitle,
     ServiceItem,
   },
   data() {
